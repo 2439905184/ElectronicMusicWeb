@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐小站</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- usercode -->
+    <style>
+        .top-title
+        {
+            width: 800px;
+            height: 400px;
+            background-color:bisque ;
+        }
+        .top-title > .tag
+        {
+            position: relative;
+            top: 0;
+        }
+        .top-title > .title
+        {
+            position: relative;
+            bottom: 0;
+        }
+        .top-title > .writter
+        {
+            position: relative;
+            top: 0;
+        }
+        #recommand-bar
+        {
+            list-style-type: none;
+            width: 290px;
+            height: 610px;
+        }
+        .custom-hr
+        {
+        color: white;
+        background-color: #67c99c;
+        }
+        .tiezi-list
+          {
+              list-style: none;
+          }
+          .tiezi-list > li:hover
+          {
+              background-color: aqua;
+          }
+    </style>
+</head>
+<body>
+    <!-- 建站大方 -->
+    <!-- 资料类，参考vndb（视觉小说数据库），bangumi（番组计划），萌娘百科（词条系统，tag系统) -->
+    <!-- 论坛类，参考豆瓣小组 -->
+    <!-- 专业类，参考国家政府网站，midifan等专业用户门户网站 -->
+    <!-- 专题页面仿，indienova -->
+    <h1 class="main-title">音乐小站</h1>
+    <nav class="navbar navbar-expand-sm bg-light">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+              <a class="nav-link" href="#">首页</a>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">文章</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">教程</a>
+          </div>
+              <!-- s<li class="nav-item">家庭民科实验组</li> -->
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">音色设计</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">热点音色</a>
+                      <a class="dropdown-item" href="#">经典音色</a>
+                  </div>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="资料库/index.html">日志</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="资料库/index.html">小组</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="res/index.html">音色下载</a>
+        </li>
+        </ul>
+    </nav>
+      <!-- <h3>最近音乐文章</h3> -->
+      <div class="custom-hr">新闻快讯</div>
+      <a href="https://www.bilibili.com/video/BV1Sh4y187EC/?spm_id_from=333.1007.tianma.1-1-1.click&vd_source=2f740c00cfe14d9860c2829322f9898f">世界第一款桌面机械合成器MOTOR Synth MKII - 功能介绍</a><br/>
+      <a href="https://b23.tv/990MDLS">【神奇！电磁场激发等离子体光环，利用振动演奏音乐！-bilibili】</a>
+      <h2>关于Synthcraft</h2>
+    <p>SynthCraft是一款由Kirsty Roland开发的可视化插件开发软件。
+
+SynthCraft是一款用于制作音频插件的可视化插件开发程序。用户可以通过选择一系列预编译模块，并用虚拟的连接线将它们连接在一起，创建一个插件项目，最后保存在VST插件。
+
+SynthCraft特点：
+
+预编译的DSP模块
+简单的拖放连接管理
+编辑器简单好用
+没有复杂的深入菜单
+动态菜单系统仅显示相关选项
+鼠标驱动的界面
+面向最终用户插件的自定义图形界面设计师
+内置高速DSP/C编译器（c）Kirsty Roland 2019-2023
+编译为本机32/64位二进制文件，无需插件封装器
+
+
+SynthCraft支持Windows系统，现阶段版本为V0.414，将会不断开发和更新，未来会添加许多新的模块和功能。
+
+<a href="https://www.kvraudio.com/product/synthcraft-by-kirsty-roland">SynthCraft免费使用链接</a></p>
+      <div class="custom-hr">百科资料库</div>
+      <ol class="tiezi-list">
+        <li><a href="百科资料库/index.html">链接</a></li>
+        <li><a href="百科资料库/FL studio的历史故事.txt">FL studio的历史故事</a></li>
+        <li><a href="https://www.zhihu.com/question/22092230#:~:text=1%20%E4%BA%BA%E8%B5%9E%E5%90%8C%E4%BA%86%E8%AF%A5%E5%9B%9E%E7%AD%94,%E8%BD%AF%E8%A7%A3%E5%B0%B1%E6%98%AF%E7%94%A8CPU%E8%A7%A3%E7%A0%81%EF%BC%8C%E9%9F%B3%E9%A2%91%E7%A1%AC%E8%A7%A3%E5%B0%B1%E6%98%AF%E9%80%9A%E8%BF%87%20%E5%A3%B0%E5%8D%A1%20%E7%AD%89%E8%AE%BE%E5%A4%87%E7%9A%84DSP%E8%8A%AF%E7%89%87%E8%A7%A3%E7%A0%81%E3%80%82">关于数字电脑音频技术的解码核心技术</a></li>
+        <li><a href="百科资料库/电音风格.html">电音风格大全</a></li>
+      </ol>
+      <div class="custom-hr">站长日志</div>
+  <ol class="tiezi-list">
+      <li><a href="站长自研/三线手脚鼓谱.html">站长自研三线简单架子鼓谱</a></li>
+      <li>    <a href="站长自研/弦乐器特殊技法记谱法.html">弦乐器特殊技法记谱法</a></li>
+      <li>  <a href="站长自研/One Day(Funky Mix) Bass弦谱/index.html">OneDay(Funcky Mix)Bass弦谱</a></li>
+      <li><a href="百科资料库/基于谐波时间编程的合成器.txt">基于谐波时间编程的合成器</a></li>
+      <li><a href="作曲/奇幻类音乐作曲手法.txt">奇幻类音乐作曲手法</a></li>
+  </ol>
+      <div class="custom-hr">专题</div>
+      <ol class="tiezi-list">
+        <li>  <a href="专题/FL Studio专题/index.html">FL Studio专题</a></li>
+        <li> <a href="专题/70年代电脑专题/list.html">70年代电脑音乐专题</a></li>
+        <li> <a href="专题/开源专题/index.html">开源专题</a></li>
+        <li> <a href="专题/数字音频开发技术/index.html">数字音频开发技术</a></li>
+        
+        <li>    <a href="专题/实用技巧/index.html">实用技巧</a></li>
+        <li>    <a href="专题/软件专题/index.html">软件专题</a></li>
+       
+        <li>    <a href="专题/演奏专题/index.html">演奏专题</a></li>
+        <li><a href="专题/tb303专题/index.html">tb-303专题</a></li>
+        <li>        <a href="mod音乐区/index.html">Mod音乐专题</a></li>
+        <li><a href="电音区/音色合成专题.html">音色合成专题</a></li>
+
+      </ol>
+
+      <div class="custom-hr">学习</div>
+      <ol class="tiezi-list">
+        <li>    <a href="专题/乐理学习/index.html">乐理学习</a></li>
+        <li><a href="专题/合成器学习/index.html">合成器学习</a></li>
+        <li><a href="专题/HipHop/index.html">关于hipHop音乐的制作</a></li>
+        <li><a href="专题/电音制作/electro-house.html">关于electro house的制作</a></li>
+        <li><a href="http://">关于chillout的制作</a></li>
+        <li><a href="专题/电音制作/sample-music.html">一种使用采样拼接的电音制作办法</a></li>
+        <li><a href="专题/常见电音音色/index.html">常见电音音色</a></li>
+      </ol>
+
+      <div class="custom-hr">音乐与评论</div>
+      <a href="专题/锐评/index.html">锐评</a>
+      <div class="custom-hr">交叉领域</div>
+      <ol class="tiezi-list">
+        <li>  <a href="交叉领域/index.html">学科交叉领域</a></li>
+      </ol>
+      <div class="custom-hr">电音学习经验分享</div>
+      <ol class="tiezi-list">
+        <li><a href="电音区/个人经验/index.html">站长个人经验</a></li>
+        <li><a href="电音区/网友经验/index.html">网友经验</a></li>
+        <li>  <a href="电音区/电音心得/index.html">站长给其他电音创作者者的心得建议</a></li>
+        <li>    <a href="电音区/007 曲风/index.html">站长的配器参考建议</a></li>
+        <li>   <a href="电音区/节奏型参考.html">站长的鼓手节奏型参考建议</a></li>
+        <li><a href="https://warmplace.ru/soft/pixilang/">基于Pixilang语言快速实现电音编程</a></li>
+    </ol>
+      <div class="custom-hr">电音名人堂</div>
+      <a href="电音区/006 名人堂/index.html">电音名人堂</a>
+      <div class="custom-hr">电音与哲学</div>
+      <ol class="tiezi-list">
+        <li><a href="电音区/电音与哲学/关于电子音乐的本质性哲学思考.html">电音的哲学性</a></li>
+        <li><a href="电音区/电音与哲学/器乐与人声乐器以及电子乐器和传统拟音工具的本质与异同.html">关于器乐与人声乐器以及电子乐器和传统拟音工具的本质与异同</a></li>
+      </ol>
+      <div class="custom-hr">关于音乐的社会学分析</div>
+      <a href="关于音乐的社会学分析.html">关于音乐的社会学分析</a>
+      <div class="custom-hr">乐器音色多媒体展示</div>
+      <a href="民族乐器大全.html">民族乐器大全</a>
+      <div class="custom-hr">好玩的</div>
+      <a href="好玩的.html">好玩的</a>
+      <div class="custom-hr">乐器生产商</div>
+      <a href="厂商参考.html">参考</a>
+      <div class="custom-hr">站长的思考</div>
+      <ol class="tiezi-list">
+        <li><a href="电音区/站长的思考/vsti插件普遍存在的问题.html">关于vsti音源插件在手机上实现的差别和问题</a></li>
+      </ol>
+      
+      <div class="custom-hr">站长的FL音色分享</div>
+      <ol>
+        <li><a href="https://wwzs.lanzouy.com/iBpMy0svw0jg">基于FL SeamlessR大神的FM采样包</a></li>
+        <li><a href="res/SeamlessR-FM Bass2.fst">SeamlessR-FM Bass2.fst</a></li>
+        <li><a href="res/SeamlessR-FM Bass3.fst">SeamlessR-FM Bass3.fst</a></li>
+      </ol>
+      <h2>关于livehouse</h2>
+      <p>livehouse的门票是多少</p>
+      <p>LiveHouse的门票价格并不固定，主要取决于演出类型、演出嘉宾和座位等级等因素。例如，在北京市场上，主要的LiveHouse门票价格在100元至300元之间。然而，也有价格较高的门票，如偶像团体ONER组合的一场LiveHouse最高档票价达到1280元，而孟美岐的LiveHouse票价则从580元到1380元不等。另外，从大麦网平台公开的票价数据来看，LiveHouse的价格基本都在两三百到五六百之间，但也有逼近四位数票价的情况，如正在预售的陈粒巡回演唱会，目前唯一有余量的门票价格为999元。
+        
+
+总的来说，LiveHouse的门票价格因各种因素而异，建议根据自己的预算和喜好选择合适的演出和座位等级。同时，购票时也请注意官方渠道和防骗提醒，确保购票安全和顺利。</p>
+        <h2>livehouse是什么国家文化进入中国国内的</h2>
+        <p>LiveHouse最早起源于日本，后来逐渐传播到其他国家，包括中国。LiveHouse作为一种音乐现场演出形式，在中国国内得到了越来越多的关注和喜爱，成为了一种独特的文化现象。在中国，LiveHouse的发展受到了日本和欧美等国家的影响，同时也融入了中国本土的文化元素和市场需求，形成了具有中国特色的LiveHouse文化。因此，可以说LiveHouse文化是在多个国家的共同影响下进入中国的，而在中国的发展过程中，也形成了自己独特的特点和魅力。</p>
+    <h2>有关链接</h2>
+    <!--参考资料-->
+    <a href="https://blog.wavosaur.com/">博客龙</a>
+    <a href="https://www.midifan.com/">midifan</a>
+    <a href="https://www.midishow.com/">midishow</a>
+    </body>
+    </html>
+    <!-- <ol id="recommand-bar">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ol> -->
+<!--  
+    <ol>
+        <li><a href="电音区/index.html">电音区</a></li>
+        <li><a href="">古典音乐区</a></li>
+        <li><a href="">作曲</a></li>
+    </ol>
+    <h2>音乐风格专题</h2>
+    <!-- 层叠目录 -->
+    <!-- <ol>
+        <li>传统</li>
+        <li>电子</li>
+            <ol>
+                <li>微分音</li>
+                <li>House</li>
+            </ol>
+    </ol> -->
+    <!-- rss订阅 -->
+
+<!--
+    <div class="wrapper">
+       
+        <div class="top-title">
+            <span class="tag">文章tag</span>
+            <h4 class="title">文章标题</h4>
+            <small class="writer">文章作者</small>
+        </div>
+        <div class="">
+            <a href="">会员制作的音乐</a>
+            <a href="">必听音乐</a>
+        </div>
+        <div class="side-bar">
+            <span>24小时推荐</span>
+            <span>关注的动态</span>
+        </div>
+        <div>
+            <h2>推荐内容</h2>
+        </div>
+        <div>
+            <h2>会员制作音乐</h2>
+            <a href="">更多会员音乐</a>
+        </div>
+        <div>
+            <h2>推广内容</h2>
+        </div>
+        <div>热门音乐</div>
+        <div>
+            <h2>最新音乐文章</h2>
+        </div>
+        <div>
+            <h2>音乐历史回顾</h2>
+        </div>
+
+        <div>
+            <h2>音色素材</h2>
+            <a href="">更多音色素材</a>
+        </div>
+        <div>
+            <h2>最近音色设计文章</h2>
+            
+        </div>
+
+    </div>
+-->
